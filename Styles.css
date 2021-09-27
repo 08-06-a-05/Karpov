@@ -36,3 +36,10 @@
     padding: 5px 0;
     font-size: 17px;
 }
+.main-image{
+    border:solid black 2px;
+    border-radius: 50px;
+}
+.image{
+    border:solid black 1px;
+}
