@@ -10,7 +10,6 @@
     margin: 10px 0;
     font-size: 18px;
     list-style-type: none;
-    
     text-align: left;
     vertical-align: middle;
     
@@ -39,7 +38,22 @@
 .main-image{
     border:solid black 2px;
     border-radius: 50px;
+    height: 200px
+    
 }
 .image{
     border:solid black 1px;
+}
+.Main_page_kartinka{
+    border-radius: 20px;
+    border: solid black 2px;
+    background-image: url(https://cdn.discordapp.com/attachments/582888069439684628/884091914335440997/5904015s-1920.png);
+    height:200px;
+    width:300px;
+    background-size: 100% 100%;
+}
+.Main_page_kartinka a{
+    height:100%;
+    display: block;
+    border-radius: 20px;
 }
