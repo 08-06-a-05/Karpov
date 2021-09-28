@@ -28,11 +28,15 @@
     background-color: #c51d34;
     color:white;
     text-align: center;
-    height: 30px;  
+    height: 30px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }
 .footer p{
     height: 20px;
-    padding: 5px 0;
+    margin: 5px 0;
     font-size: 17px;
 }
 .main-image{
@@ -44,16 +48,31 @@
 .image{
     border:solid black 1px;
 }
-.Main_page_kartinka{
+.Advertisment_image{
     border-radius: 20px;
     border: solid black 2px;
-    background-image: url(https://cdn.discordapp.com/attachments/582888069439684628/884091914335440997/5904015s-1920.png);
-    height:200px;
-    width:300px;
+    height:100%;
+    width:32%;
     background-size: 100% 100%;
+    display: inline-block;
 }
-.Main_page_kartinka a{
+
+.Advertisment_image a{
     height:100%;
     display: block;
     border-radius: 20px;
+}
+.Advertisment_image:hover{
+    border-radius: 20px;
+    border: solid black 2px;
+    height:100%;
+    width:32%;
+    display: inline-block;
+    opacity: 0.3;
+    background-color: #c51d34;
+    background-image: none;
+}
+.Main_page_banners{
+    height: 200px;
+    width:900px;
 }
