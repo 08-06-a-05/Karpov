@@ -7,11 +7,11 @@
 }
 .header_menu{
     height: 20px;
-    margin: 10px 0;
     font-size: 18px;
     list-style-type: none;
     text-align: left;
     vertical-align: middle;
+#    display: inline-block;
     
 }
 .header_menu li{
@@ -30,9 +30,9 @@
     text-align: center;
     height: 30px;
     width: 100%;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+    position: relative;
+    display: block;
+    margin-bottom: 0px;
 }
 .footer p{
     height: 20px;
@@ -74,4 +74,23 @@
 .Main_page_banners{
     height: 200px;
     width:900px;
+}
+
+.feedback_form{
+    position: relative;
+}
+.body{
+    margin-bottom: 0 !important;
+}
+.logo{
+    height: 40px;
+    display: inline-block;
+}
+.logo_image{
+    height:40px;
+}
+.header_menu_container{
+    height:20px;
+    display: inline-block;
+    margin: 10px 0;
 }
