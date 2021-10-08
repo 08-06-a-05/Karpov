@@ -4,20 +4,25 @@
     background-color: #c51d34;
     margin: 5px;
     overflow: hidden;
+    display: block;
 }
 .header_menu{
     height: 20px;
     font-size: 18px;
     list-style-type: none;
     text-align: left;
-    vertical-align: middle;
-#    display: inline-block;
+    padding-inline-start: 0px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    
+
     
 }
 .header_menu li{
+    display: inline-block;
+    margin: auto;
     display: inline;
-    vertical-align: middle;
-    margin: 0 10px;
     
 }
 .header_menu a{
@@ -92,5 +97,6 @@
 .header_menu_container{
     height:20px;
     display: inline-block;
-    margin: 10px 0;
+    border: solid black 2px;
+    margin-top: 0px;
 }
