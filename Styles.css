@@ -1,31 +1,27 @@
 .header{
     height: 40px;
+    width: 100%;
     background-color: #c51d34;
-    margin: 5px;
     overflow: hidden;
     display: block;
-}
-.header_menu{
-    height: 20px;
-    width: 300px;
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    vertical-align: top;
-    margin-right: 10px;
-    margin-left: auto;
-      
-}
-.header_choose{
-    height:20px;
-    margin:0 0;
     padding: 0;
 }
+.header_menu{
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin-block: 0;
+    left:87%;
+    top:-35%;
+    width:200px;
+    height:21px;
+}
+
 .header_menu li{
     display: inline-block;
-    margin:auto 10px;
-    display: inline;
+    margin-left: 20px;
     font-size: 18px;
+    height:20px;
     
 }
 .header_menu a{
@@ -55,6 +51,18 @@
 }
 .image{
     border:solid black 1px;
+    width: 300px;
+}
+.product{
+    width:320px;
+    display: inline-block;
+    height:500px;
+    text-align: center;
+    margin: 50px 0;
+    
+}
+.product:hover{
+    border: solid black 2px;
 }
 .Advertisment_image{
     border-radius: 20px;
@@ -100,13 +108,9 @@
 .logo_image{
     height:40px;
 }
-.header_menu_container{
-    height:20px;
-    display: inline-block;
-    border: solid black 2px;
-    margin-top: 0px;
-}
+
 .container{
     width:100%;
     margin: 0 auto;
+    height:100%;
 }

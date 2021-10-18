@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <title>Каталог Рено</title>
     <link rel="stylesheet" type="text/css" href="Styles.css">
-    <div class="header">
-        <ul class="header_menu">
-            <li><a href="Main_page.html">Главная</a></li>
-            <li><a href="About_us.html">О нас</a></li>
-        </ul>
-    </div>
 </head>
 <body>
-    <h1>Каталог Рено</h1>
-    <h2>Рено Логан 2010</h2>
-    <img class="image" src="https://cdn.discordapp.com/attachments/582888069439684628/884097465962360864/1200x900.png" alt="" width="500px">
-    <p>Бюджетный субкомпактный автомобиль, разработанный компанией Renault специально для развивающихся рынков. Основное производство развёрнуто в Румынии на заводе промышленной группы Dacia, с 1999 года принадлежащей компании Renault. В России первое поколение автомобиля выпускалось с 2005 года по декабрь 2015 на заводе Автофрамос в Москве, а с 2014 года на заводе АвтоВАЗ в Тольятти выпускается второе поколение.</p>
-    <button onclick="window.location.href = 'Reno_logan_2010.html';">Осмотреть</button>
-    <br>
-    <h2>Рено Дастер 2021</h2>
-    <img class="image" src="https://cdn.discordapp.com/attachments/582888069439684628/884097046565486592/fe2937a0ae.png" alt="" width="500px">
-    <p>Новый Renault DUSTER — это полностью новый кузов, полностью новый интерьер и самые современные опции. Новый DUSTER — это легендарная надежность и уверенность за рулем в сочетании с новым уровнем комфорта. А еще, Новый DUSTER — это две индивидуальности.</p>
-    <button onclick="window.location.href = 'Reno_daster_2021.html';">Осмотреть</button>
-    <br>
-    <footer class="footer">
-        <p>Автор сайта: Карпов Георгий</p>
-    </footer>
+    
+    <div class='container'>
+        <div class="header">
+            <div class="logo">
+                <img class="logo_image" src="70b769ad77fc0b224920eb352f9aedb5.jpg" alt="Логотип">
+            </div>
+            <ul class="header_menu">
+                <li><a href="Main_page.html">Главная</a></li>
+                <li><a href="About_us.html">О нас</a></li>
+            </ul>
+        </div>
+        <div class="products">
+            <div class='product'>
+                <div class='ramka'></div>
+                <h2>Рено Логан 2010</h2>
+                <img class="image" src="https://cdn.discordapp.com/attachments/582888069439684628/884097465962360864/1200x900.png" alt="" width="500px">
+                <p>Бюджетный субкомпактный автомобиль, разработанный компанией Renault.</p>
+                <button onclick="window.location.href = 'Reno_logan_2010.html';">Осмотреть</button>
+                <button onclick="window.location.href = 'pokupka.html';">Купить</button>
+            </div>
+            <div class='product'>
+                <h2>Рено Дастер 2021</h2>
+                <img class="image" src="https://cdn.discordapp.com/attachments/582888069439684628/884097046565486592/fe2937a0ae.png" alt="" width="500px">
+                <p>Новый Renault DUSTER — это полностью новый кузов, полностью новый интерьер и самые современные опции.</p>
+                <button onclick="window.location.href = 'Reno_daster_2021.html';">Осмотреть</button>
+                <button onclick="window.location.href = 'pokupka.html';">Купить</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Автор сайта: Карпов Георгий</p>
+        </footer>
+    </div>
 </body>
 </html>
