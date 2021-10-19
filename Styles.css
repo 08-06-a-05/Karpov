@@ -1,23 +1,27 @@
 .header{
-    text-align: left;
     height: 40px;
+    width: 100%;
     background-color: #c51d34;
-    margin: 5px;
     overflow: hidden;
+    display: block;
+    padding: 0;
 }
 .header_menu{
-    height: 20px;
-    margin: 10px 0;
-    font-size: 18px;
-    list-style-type: none;
-    text-align: left;
-    vertical-align: middle;
-    
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin-block: 0;
+    left:86%;
+    top:-30%;
+    width:200px;
+    height:21px;
 }
+
 .header_menu li{
-    display: inline;
-    vertical-align: middle;
-    margin: 0 10px;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 18px;
+    height:20px;
     
 }
 .header_menu a{
@@ -30,9 +34,9 @@
     text-align: center;
     height: 30px;
     width: 100%;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+    position: relative;
+    display: block;
+    margin-bottom: 0px;
 }
 .footer p{
     height: 20px;
@@ -47,6 +51,18 @@
 }
 .image{
     border:solid black 1px;
+    width: 300px;
+}
+.product{
+    width:320px;
+    display: inline-block;
+    height:500px;
+    text-align: center;
+    margin: 50px 0;
+    
+}
+.product:hover{
+    border: solid black 2px;
 }
 .Advertisment_image{
     border-radius: 20px;
@@ -74,4 +90,32 @@
 .Main_page_banners{
     height: 200px;
     width:900px;
+}
+
+.feedback_form{
+    position: relative;
+}
+.body{
+    margin-bottom: 0 !important;
+}
+.logo{
+    height: 36px;
+    display: inline-block;
+    border-radius:100%;
+    border: solid black 2px;
+    overflow: hidden;
+}
+.logo_image{
+    height:40px;
+}
+
+.container{
+    width:100%;
+    margin: 5px 5px;
+    height:100%;
+    max-width: 1920px;
+    max-height: 1080px;
+}
+@media screen and (min-device-width: 1600px) {
+    #container {max-width: 1500px;}
 }
