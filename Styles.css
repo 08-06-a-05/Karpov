@@ -11,8 +11,8 @@
     display: inline-block;
     padding: 0;
     margin-block: 0;
-    left:87%;
-    top:-35%;
+    left:86%;
+    top:-30%;
     width:200px;
     height:21px;
 }
@@ -111,6 +111,11 @@
 
 .container{
     width:100%;
-    margin: 0 auto;
+    margin: 5px 5px;
     height:100%;
+    max-width: 1920px;
+    max-height: 1080px;
+}
+@media screen and (min-device-width: 1600px) {
+    #container {max-width: 1500px;}
 }
