@@ -4,4 +4,4 @@ UPDATE cars
 SELECT name_of_customer, MAX(id_order) AS 'last_user' FROM orders
 SELECT year FROM cars GROUP BY year
 SELECT COUNT(*) as 'cars_total' FROM cars
-SELECT avg(year) from cars where year>='2020'
+SELECT avg(year) from cars where year>=substr(CURRENT_DATE,1,4)-'1'
