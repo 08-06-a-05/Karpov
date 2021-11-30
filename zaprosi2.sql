@@ -1,0 +1,5 @@
+SELECT id_car FROM cars WHERE brand=(SELECT id FROM brands WHERE name="Renault") -- Показать все автомобили марки Рено
+SELECT id_car FROM cars WHERE brand=(SELECT id FROM brands WHERE name="Renault") AND engine=(SELECT id from engines WHERE type="Бензин") -- Показать все бензиновые Рено
+SELECT id_car FROM cars WHERE brand=(SELECT id FROM brands WHERE name="BMW") AND model="X5" -- Показать все автомобили BMW X5
+SELECT name_of_customer AS "Имя клиента",phone AS "Телефон клиента" FROM orders WHERE id_car=(SELECT id_car FROM cars WHERE brand=(SELECT id FROM brands WHERE name="BMW") AND model="X5") -- Показать имена и телефоны клиентов, интересовавшихся или купивших BMW X5
+SELECT name_of_customer AS "Имя клиента",phone AS "Телефон клиента" FROM orders WHERE status="Интересовался" AND best_price>=10000000000 AND id_car=(SELECT id_car FROM cars where brand=(SELECT id from brands where name="BMW") and model="X5") -- Показать имена и телефоны клиентов, которые интересовались авто BMW X5, но не купили, больше определенной цены, чтобы предложить им скидку
