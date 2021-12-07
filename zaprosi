@@ -6,14 +6,28 @@ def initialization():
     cursor = connection.cursor()
     return connection, cursor
 
+def Renault_cars(cursor):
+    cursor.execute('SELECT id_car FROM cars WHERE brand=(SELECT id FROM brands WHERE name="Renault")')
+    return cursor.fetchall()
+
+
+def BMW_X5_choosers(cursor):
+    cursor.execute(
+        'SELECT name_of_customer AS "Имя клиента",phone AS "Телефон клиента" FROM orders WHERE id_car=(SELECT id_car '
+        'FROM cars WHERE brand=(SELECT id FROM brands WHERE name="BMW") AND model="X5")')
+    return cursor.fetchall()
+
+
+def BMW_X5_without_discounts(cursor):
+    cursor.execute(
+        'SELECT name_of_customer AS "Имя клиента",phone AS "Телефон клиента" FROM orders WHERE status="Интересовался" '
+        'AND best_price>=10000000000 AND id_car=(SELECT id_car FROM cars where brand=(SELECT id from brands where '
+        'name="BMW") and model="X5")')
+    return cursor.fetchall()
+
 
 connection, cursor = initialization()
-cursor.execute('SELECT id_car FROM cars WHERE brand=(SELECT id FROM brands WHERE name="Renault")')
-print(cursor.fetchall())
-cursor.execute(
-    'SELECT name_of_customer AS "Имя клиента",phone AS "Телефон клиента" FROM orders WHERE id_car=(SELECT id_car FROM cars WHERE brand=(SELECT id FROM brands WHERE name="BMW") AND model="X5")')
-print(cursor.fetchall())
-cursor.execute(
-    'SELECT name_of_customer AS "Имя клиента",phone AS "Телефон клиента" FROM orders WHERE status="Интересовался" AND best_price>=10000000000 AND id_car=(SELECT id_car FROM cars where brand=(SELECT id from brands where name="BMW") and model="X5")')
-print(cursor.fetchall())
+print(Renault_cars(cursor))
+print(BMW_X5_choosers(cursor))
+print(BMW_X5_without_discounts(cursor))
 connection.close()
