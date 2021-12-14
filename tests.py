@@ -1,4 +1,5 @@
 import unittest
+from zaprosi import DB
 
 class DBTest(unittest.TestCase):
     @classmethod
