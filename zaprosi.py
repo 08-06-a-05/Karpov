@@ -4,7 +4,12 @@ import sqlite3
 class DB():
     def __init__(self):
         self.connection = sqlite3.connect('NewDB.db')
+
+    def CursorOpen(self):
         self.cursor = self.connection.cursor()
+
+    def CursorClose(self):
+        self.cursor.close()
 
     def close(self):
         self.connection.close()
@@ -29,6 +34,7 @@ class DB():
 
 
 baza=DB()
+baza.CursorOpen()
 print(baza.Renault_cars())
 print(baza.BMW_X5_choosers())
 print(baza.BMW_X5_without_discounts())
