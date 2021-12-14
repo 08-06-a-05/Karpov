@@ -32,10 +32,11 @@ class DB():
             'name="BMW") and model="X5")')
         return self.cursor.fetchall()
 
-
+'''
 baza=DB()
 baza.CursorOpen()
 print(baza.Renault_cars())
 print(baza.BMW_X5_choosers())
 print(baza.BMW_X5_without_discounts())
 baza.close()
+'''
