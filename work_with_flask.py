@@ -57,18 +57,20 @@ class Orders(db.Model):
     phone = db.Column(db.String(30), nullable=False)
     call_time = db.Column(db.String(80), default='Now')
     status = db.Column(db.String(80), default='Interested')
-    status = db.Column(db.Integer, default='1000000000')
+    best_price = db.Column(db.Integer, default=1000000000)
 
 
 # db.create_all()
+brand = Brands(name='BMW')
+transmission = Transmissions(name='Автомат')
+body = Bodies(name='Универсал')
+engine = Engines(name='Дизель')
+car = Cars(model='X5', vin='9876543210', year='2021', colour='white', complectation='speed', photo='link2',
+           price=99999999900, description='Супер крутая тачила', transmission_connection=transmission, engine_connection=engine,
+           body_connection=body, brand_connection=brand)
 
-# car = Cars(model='Logan', vin='1234567890', year='2010', colour='red', complectation='low', photo='link1', price=1000000, description='Так себе авто, но если денег мало, то пойдёт...',transmission=3,engine=1,body=1,brand=1)
-# brand = Brands(name='Renault')
-# transmission = Transmissions(name='Механика')
-# body = Bodies(name='Седан')
-# engine = Engines(name='Бензин')
-# db.session.add(transmission)
+db.session.add(car)
 # db.session.add(body)
 # db.session.add(engine)
 # db.session.add(car)
-# db.session.commit()
+db.session.commit()
