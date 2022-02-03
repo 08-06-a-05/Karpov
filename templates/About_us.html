@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About_us</title>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles.css') }}">
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="logo">
-                <img class="logo_image" src="70b769ad77fc0b224920eb352f9aedb5.jpg" alt="Логотип">
+                <img class="logo_image" src="{{ url_for('static', filename='images/70b769ad77fc0b224920eb352f9aedb5.jpg') }}" alt="Логотип">
             </div>
             <ul class="header_menu">
-                <li><a href="Main_page.html">Главная</a></li>
-                <li><a href="About_us.html">О нас</a></li>
+                <li><a href="/main_page/">Главная</a></li>
+                <li><a href="/about_us/">О нас</a></li>
             </ul>
         </div>
         <h1>О нас

@@ -18,6 +18,10 @@ def buy_car():
 def reno_logan():
     return render_template("Reno_logan_2010.html")
 
+@app.route('/about_us/')
+def about_us():
+    return render_template("About_us.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
 
