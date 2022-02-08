@@ -2,6 +2,11 @@ from flask import *
 
 app = Flask(__name__)
 
+@app.route('/')
+def new_main_page():
+    return render_template("new_main_page.html")
+
+
 @app.route('/main_page/')
 def main_page():
     return render_template("Main_page.html")

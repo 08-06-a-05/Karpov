@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="style.css" />
+    <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="main-wrapper">
+        <div id="header">
+            {% block header %}
+            <div class="logo">
+                <img class="logo_image" src="{{ url_for('static', filename='images/70b769ad77fc0b224920eb352f9aedb5.jpg') }}" alt="Логотип">
+            </div>
+            <ul class="header_menu">
+                <li><a href="/main_page/">Главная</a></li>
+                <li><a href="/about_us/">О нас</a></li>
+            </ul>
+            {% endblock %}
+        </div>
+        <div id="content">{% block content %}{% endblock %}</div>
+        <div id="footer">
+            {% block footer %}
+            <p>Автор сайта: Карпов Георгий</p>
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

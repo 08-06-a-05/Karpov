@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Главная{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='BebasNeue-Regular.ttf') }}">
+{% endblock %}
+{% block header %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <h1>Index</h1>
+    <p class="important">
+      Welcome to my awesome homepage.
+    </p>
+{% endblock %}
+{% block footer %}
+    {{ super() }}
+{% endblock %}
