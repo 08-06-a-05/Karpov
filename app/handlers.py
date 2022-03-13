@@ -6,12 +6,12 @@ from flask import (
 )
 
 
-@app.route('/')
+@app.route('/not_main_page/')
 def new_main_page():
     return render_template("new_main_page.html")
 
 
-@app.route('/main_page/')
+@app.route('/')
 def main_page():
     return render_template("Main_page.html")
 
