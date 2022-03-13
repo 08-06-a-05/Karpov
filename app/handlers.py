@@ -1,6 +1,10 @@
-from flask import *
+import sqlalchemy
+# from app.models import ...
+from app.app import app,db
+from flask import (
+    render_template
+)
 
-app = Flask(__name__)
 
 @app.route('/')
 def new_main_page():

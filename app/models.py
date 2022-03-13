@@ -1,10 +1,5 @@
-from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__)  # объект приложения Flask
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testdb.db'  # привязываем базу данных
-db = SQLAlchemy(app)  # создаем объект SQLAlchemy
-
+from app.app import db
 
 class Cars(db.Model):
     id_car = db.Column(db.Integer, primary_key=True)
@@ -72,27 +67,3 @@ class Orders(db.Model):
     best_price = db.Column(db.Integer, default=1000000000)
     def __repr__(self):
         return f'({self.id_order}, {self.id_car}, {self.name_of_customer}, {self.phone})'
-
-'''
-# db.create_all()
-reno = Cars.query.all()[0]
-bmw = Cars.query.all()[1]
-maserati = Cars.query.all()[2]
-car = Cars(model='GranTurismo', vin='5555555555', year='2020', colour='black', complectation='speed+', photo='link3',
-           price=1050010500, description='Обалдеть, еще быстрее BMW, но не такая комфортная', transmission_connection=obj1, engine_connection=obj2,
-           body_connection=body, brand_connection=brand)
-
-# order1 = Orders(car_connection=reno, name_of_customer='Иван', phone='+77777777777')
-order2 = Orders(car_connection=bmw, name_of_customer='Никита', phone='+79999999999', best_price=12456456564)
-order3 = Orders(car_connection=maserati, name_of_customer='Наталья', phone='+78888888888', status='Сделал заказ', best_price=123456)
-# db.session.add(car)
-# db.session.add(body)
-# db.session.add(engine)
-db.session.add_all([order2,order3])
-db.session.commit()
-# print(reno)'''
-bmw = Cars.query.all()[1]
-third_order = Orders.query.all()[2]
-third_order.car_connection = bmw
-db.session.add(third_order)
-db.session.commit()
